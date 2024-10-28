@@ -35,6 +35,7 @@ public class MicroserviceController {
   @GetMapping("/")
   public @ResponseBody String index() {
     // Example of structured logging - add custom fields
+    System.out.print("Hello");
     MDC.put("logField", "custom-entry");
     MDC.put("arbitraryField", "custom-entry");
     // Use logger with log correlation
